@@ -1,12 +1,11 @@
 {
+  "manifest_version": 3,
   "name": "mtu",
-  "description": "Copy current page/title and url as markdown [title](url)",
   "version": "0.3",
-  "manifest_version": 2,
+  "description": "Copy current page/title and url as markdown [title](url)",
   "background": {
-      "page": "index.html"
+      "service_worker": "service-worker.js"
   },
-  "permissions": ["clipboardWrite", "activeTab", "notifications"],
   "commands": {
       "copy-pair": {
           "suggested_key": {
@@ -14,5 +13,12 @@
           },
           "description": "Copy [title](url)"
       }
-  }
+  },
+  "content_scripts": [
+      {
+          "matches": ["https://*/*"],
+          "js": ["content-script.js"]
+      }
+  ],
+  "permissions": ["clipboardWrite", "activeTab", "notifications"]
 }
