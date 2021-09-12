@@ -27,9 +27,6 @@ indicating unpacked status. The suggested shortcut is "Ctrl+Shift+Y".
 
 None.
 
-## Possible directions
+## Roadmap / work in progress
 
-1. add options (ex: toggles for notifications on success/failure)
-2. use nice icons on notifications and such
-3. rework the code to v3
-4. add a firefox version
+https://trello.com/b/t62OLuAz/mtu
