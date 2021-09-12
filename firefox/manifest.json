@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "mtu",
+  "version": "0.3",
+  "description": "Copy current page title/url in clipboard as [title](url)",
+  "permissions": ["tabs", "activeTab"],
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+  "background": {
+      "scripts": ["background-script.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "commands": {
+      "copy-pair": {
+          "suggested_key": {
+              "default": "Ctrl+Shift+U"
+          },
+          "description": "Save Miaou"
+      }
+  }
+}
+
